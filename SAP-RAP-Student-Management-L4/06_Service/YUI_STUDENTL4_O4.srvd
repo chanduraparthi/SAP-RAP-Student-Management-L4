@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for STBL_studentl4'
+define service yui_studentl4_o4 {
+  expose YC_studentl4;
+}

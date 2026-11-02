@@ -1,0 +1,91 @@
+@Metadata.layer: #PARTNER
+
+@UI.headerInfo: {
+  typeName: 'Student',
+  typeNamePlural: 'Students',
+  title: {
+    type: #STANDARD,
+    label: 'Student',
+    value: 'ID'
+  }
+}
+
+annotate entity YC_studentl4
+with
+{
+  @UI.facet: [
+    {
+      id: 'StudentGeneralInfo',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Student Information',
+      position: 10
+    }
+  ]
+
+  @UI: {
+    lineItem: [{ position: 10, label: 'StudentID' }],
+    identification: [{ position: 10, label: 'StudentID' }]
+  }
+  id;
+
+  @UI: {
+    lineItem: [{ position: 20, label: 'Firstname' }],
+    identification: [{ position: 20, label: 'Firstname' }]
+  }
+  firstname;
+
+  @UI: {
+    lineItem: [{ position: 30, label: 'Lastname' }],
+    identification: [{ position: 30, label: 'Lastname' }]
+  }
+  lastname;
+
+  @UI: {
+    lineItem: [{ position: 40, label: 'Age' }],
+    identification: [{ position: 40, label: 'Age' }]
+  }
+  age;
+
+  @UI: {
+    lineItem: [{ position: 50, label: 'Course' }],
+    identification: [{ position: 50, label: 'Course' }]
+  }
+  course;
+
+  @UI: {
+    lineItem: [{ position: 60, label: 'Courseduration' }],
+    identification: [{ position: 60, label: 'Courseduration' }]
+  }
+  courseduration;
+
+  @UI: {
+    lineItem: [
+      { position: 70, label: 'Status' },
+      { type: #FOR_ACTION, dataAction: 'SetAdmitted', label: 'SetAdmitted' }
+    ],
+    identification: [
+      { position: 70, label: 'Status' },
+      { type: #FOR_ACTION, dataAction: 'SetAdmitted', label: 'SetAdmitted' }
+    ]
+  }
+  status;
+
+  @UI: {
+    lineItem: [{ position: 80, label: 'Gender' }],
+    identification: [{ position: 80, label: 'Gender' }]
+  }
+  gender;
+
+  @UI: {
+    lineItem: [{ position: 90, label: 'DOB' }],
+    identification: [{ position: 90, label: 'DOB' }]
+  }
+  dob;
+
+  @UI.hidden: true
+  lastchangedat;
+
+  @UI.hidden: true
+  locallastchangedat;
+}

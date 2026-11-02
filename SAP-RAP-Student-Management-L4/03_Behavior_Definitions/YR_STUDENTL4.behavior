@@ -1,0 +1,31 @@
+managed implementation in class zbp_r_studentl4 unique;
+
+strict ( 2 );
+
+define behavior for YR_studentl4
+persistent table ytbl_studentl4
+lock master
+authorization master ( instance )
+etag master lastchangedat
+{
+  create;
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) Id;
+
+  mapping for ytbl_studentl4
+  {
+    Id = id;
+    Firstname = firstname;
+    Lastname = lastname;
+    Age = age;
+    Course = course;
+    Courseduration = courseduration;
+    Status = status;
+    Gender = gender;
+    Dob = dob;
+    Lastchangedat = lastchangedat;
+    Locallastchangedat = locallastchangedat;
+  }
+}
